@@ -19,16 +19,12 @@ public class MinimizeNumber {
             }
         }
         int operationsNum = 0;
-        if (isOdd==true) {
+        if (isOdd) {
             System.out.println(operationsNum);
         } else {
             for (int i = 0; i < N; i++) {
-                if (i == 0) {
+                if (i == 0 || op[i] < operationsNum) {
                     operationsNum = op[i];
-                } else {
-                    if (op[i] < op[i - 1]) {
-                        operationsNum = op[i];
-                    }
                 }
             }
             System.out.println(operationsNum);
